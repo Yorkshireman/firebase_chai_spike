@@ -1,0 +1,26 @@
+{
+  "name": "firebase_chai_spike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "*"
+  },
+  "devDependencies": {
+  "chai": "*",
+  "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yorkshireman/firebase_chai_spike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yorkshireman/firebase_chai_spike/issues"
+  },
+  "homepage": "https://github.com/Yorkshireman/firebase_chai_spike#readme"
+}
