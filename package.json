@@ -7,8 +7,9 @@
     "firebase": "*"
   },
   "devDependencies": {
-  "chai": "*",
-  "mocha": "*"
+    "chai": "*",
+    "mocha": "*",
+    "selenium-webdriver": "^2.47.0"
   },
   "scripts": {
     "test": "mocha"
