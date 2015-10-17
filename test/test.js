@@ -1,7 +1,7 @@
 var assert = require('chai').assert;
 var expect = require('chai').expect;
-test = require('selenium-webdriver/testing'),
-webdriver = require('selenium-webdriver');
+var test = require('selenium-webdriver/testing');
+var webdriver = require('selenium-webdriver');
 
 describe('Writing Messages', function() {
   it("'foo' should be a string using 'assert'", function() {
