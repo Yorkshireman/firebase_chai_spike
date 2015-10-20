@@ -1,1 +1,17 @@
-<h1 id='title'>Home Page</h1>
+<html>
+	<head>
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+	</head>
+
+	<body>
+		<h1 id='title'>Home Page</h1>
+		
+		<script>
+			var client = new Firebase('ws://test.firebase.localhost:5000');
+
+			client.on('value', function(snap) {
+			  console.log('Got value:', snap.val());
+			});
+		</script>
+	</body>
+</html>
