@@ -5,13 +5,33 @@
 
 	<body>
 		<h1 id='title'>Home Page</h1>
-		
+
 		<script>
 			var client = new Firebase('ws://test.firebase.localhost:5000');
 
 			client.on('value', function(snap) {
 			  console.log('Got value:', snap.val());
 			});
+
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#nameInput').val('');
+          $('#messageInput').val('');
+        }
+      });
+
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
 		</script>
 	</body>
 </html>
